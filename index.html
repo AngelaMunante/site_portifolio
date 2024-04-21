@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angela</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Lora:ital,wght@0,700;1,700&family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <!-- HEADER-->
+    <header>
+        <div class="header-content">
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#sobre">SOBRE MIM</a></li>
+                    <li><a href="#experiencia">EXPERIÊNCIA</a></li>
+                    <li class="header-title">
+                        <img src="img/principal/name.png" alt="ANGELA" />
+                    </li>
+                    <li><a href="#projetos">PROJETOS</a></li>
+                    <li><a href="#habilidades">HABILIDADES</a></li>
+                    <li><a href="#contatos">CONTATOS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- HOME-->
+    <div class="frame-container" id="home">
+        <img src="img/principal/foto_principal.png" alt="Decorative Frame" class="decorative-frame"/>
+    </div>
+
+    <!-- SOBRE MIM-->
+    <div class="about-me-card" id="sobre">
+        <h2>ABOUT ME</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim tristique turpis, quis venenatis lorem 
+            fringilla non. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida velit et turpis egestas,
+            sed vulputate dolor varius. Praesent et dapibus dui. Praesent dapibus turpis laoreet orci faucibus, vitae bibendum 
+            elit tincidunt. Mauris ut pulvinar mi. Maecenas tincidunt urna odio, molestie faucibus risus maximus a. Praesent et 
+            dapibus dui. Praesent dapibus turpis laoreet orci faucibus, vitae bibendum elit tincidunt. Mauris ut pulvinar mi. 
+            Maecenas tincidunt urna odio, molestie faucibus risus maximus a.</p>
+    </div>
+
+    <!-- EXPERIENCIA-->
+    <div class="partes-title" id="experiencia">
+        <h2 class="cards-title">EXPERIÊNCIA</h2>
+
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3 class="card-title">CAMPANHA DO AGASALHO</h3>
+                        <img src="img/experiencia/campanha.png" alt="Project 1" class="card-image"/>
+                    </div>
+                    <div class="card-back">
+                        <p>Membro do núcleo de infraestrutura - 2023 <br> Coordenadora do núcleo de infraestrutura - 2023-2024</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3 class="card-title">LABIC</h3>
+                        <img src="img/experiencia/labic.png" alt="Project 2" class="card-image"/>
+                    </div>
+                    <div class="card-back">
+                        <p>Iniciação cientifica no projeto "Recuperçaõ de imagens microbianas por conteudo" - 2024</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3 class="card-title">SHEHACKS</h3>
+                        <img src="img/experiencia/shehacks.png" alt="Project 1" class="card-image"/>
+                    </div>
+                    <div class="card-back">
+                        <p>Participante - 2022 <br> Primer lugar - 2023</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3 class="card-title">CODELAB</h3>
+                        <img src="img/experiencia/codelab.png" alt="Project 1" class="card-image"/>
+                    </div>
+                    <div class="card-back">
+                        <p>Membro do grupo, na frente 'Dev-Scrap' - 2022</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- PROJETOS -->
+    <div class="partes-title" id="projetos">
+        <h2 class="cards-title">PROJETOS</h2>
+
+        <div class="card-container">
+            <div class="card-top-button">
+                <div class="card-topic">
+                    <p class="card-nome-projeto">Antter</p>
+                </div>
+                <button class="card-button" onclick="toggleCard('card1HiddenContent')">+</button>
+            </div>
+            <div class="card-hidden" id="card1HiddenContent">
+            <p class="card-descricao">Jogo inspirado no clássico "frogger", feito em linguagem Assembly.</p>
+                <a class="card-link" href="https://github.com/AngelaMunante/Antter.git">GitHub</a>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card-top-button">
+                <div class="card-topic">
+                    <p class="card-nome-projeto">Simplificando direito</p>
+                </div>
+                <button class="card-button" onclick="toggleCard('card2HiddenContent')">+</button>
+            </div>
+            <div class="card-hidden" id="card2HiddenContent">
+                <p class="card-descricao">Projeto feito para a hackaton SheHacks 2023</p>
+                <a class="card-link" href="https://github.com/AngelaMunante/Simplificando-Direito-She-Hacks-2023.git">GitHub</a>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card-top-button">
+                <div class="card-topic">
+                    <p class="card-nome-projeto">Processador</p>
+                </div>
+                <button class="card-button" onclick="toggleCard('card3HiddenContent')">+</button>
+            </div>
+            <div class="card-hidden" id="card3HiddenContent">
+                <p class="card-descricao">Processador feito em VHDL, com inclusão de novo comando "POW"</p>
+                <a class="card-link" href="https://github.com/AngelaMunante/Processador.git">GitHub</a>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card-top-button">
+                <div class="card-topic">
+                    <p class="card-nome-projeto">Skotter</p>
+                </div>
+                <button class="card-button" onclick="toggleCard('card4HiddenContent')">+</button>
+            </div>
+            <div class="card-hidden" id="card4HiddenContent">
+                <p class="card-descricao">Jogo inspirado no classico Skotter</p>
+                <a class="card-link" href="https://github.com/AngelaMunante/Processador.git">GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HABILIDADES -->
+    <div class="partes-title" id="habilidades">
+        <h2 class="cards-title2">HABILIDADES</h2>
+
+        <h3 class="bordered-title">LINGUAS</h3>
+
+        <div class="circular-section">
+            <div class="circular-container">
+                <div class="circle">
+                    <div class="circle-inner">
+                        <div class="circle-front">
+                            <img src="img/habilidades/portugues.png" alt="Portuguese" class="circle-image"/>
+                        </div>
+                        <div class="circle-back">
+                            <span>Português</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="circle">
+                    <div class="circle-inner">
+                        <div class="circle-front">
+                            <img src="img/habilidades/eua.png" alt="Inglês" class="circle-image"/>
+                        </div>
+                        <div class="circle-back">
+                            <span>Inglês</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="circle">
+                    <div class="circle-inner">
+                        <div class="circle-front">
+                            <img src="img/habilidades/esp.png" alt="Espanhol" class="circle-image"/>
+                        </div>
+                        <div class="circle-back">
+                            <span>Espanhol</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="bordered-title">LINGUAGES DE PROGRAMAÇÃO</h3>
+
+        <div class="skills-grid">
+            <div class="skill-item">
+                <img src="img/habilidades/c.png" alt="Skill 1" />
+                <div class="skill-description">C</div>
+            </div>
+            <div class="skill-item">
+                <img src="img/habilidades/python.png" alt="Skill 2" />
+                <div class="skill-description">Python</div>
+            </div>
+            <div class="skill-item">
+                <img src="img/habilidades/java.png" alt="Skill 3" />
+                <div class="skill-description">Java</div>
+            </div>
+            <div class="skill-item">
+                <img src="img/habilidades/sql.png" alt="Skill 4" />
+                <div class="skill-description">SQL</div>
+            </div>
+            <div class="skill-item">
+                <img src="img/habilidades/c++.png" alt="Skill 5" />
+                <div class="skill-description"> C++</div>
+            </div>
+            <div class="skill-item">
+                <img src="img/habilidades/matlab.png" alt="Skill 6" />
+                <div class="skill-description">Matlab</div>
+            </div>
+        </div>
+
+        <h3 class="bordered-title">OUTROS</h3>
+        <div class="skills-grid outros">
+            <div class="skill-item-container">
+                <div class="skill-item2">
+                    <img src="img/habilidades/Lupa.png" alt="Other Skill 1" />
+                </div>
+                <p class="skill-desc">Pesquisa</p>
+            </div>
+            <div class="skill-item-container">
+                <div class="skill-item2">
+                    <img src="img/habilidades/Sombrero.png" alt="Other Skill 2" />
+                </div>
+                <p class="skill-desc">Esino</p>
+            </div>
+            <div class="skill-item-container">
+                <div class="skill-item2">
+                    <img src="img/habilidades/Falar.png" alt="Other Skill 3" />
+                </div>
+                <p class="skill-desc">Comunicação</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- CONTATOS-->
+    <div class="partes-title" id="contatos">
+        <h2 class="cards-title2">CONTATOS</h2>
+
+        <div class="contact-icons">
+            <div class="icon-circle">
+                <a href="https://www.instagram.com/angimunantem" target="_blank" class="icon-circle">
+                    <img src="img/contatos/instagram.png" alt="Instagram" />
+                </a>
+            </div>
+            <div class="icon-circle">
+                <a href="mailto:angimunantem@usp.br" class="icon-circle">
+                    <img src="img/contatos/email.png" alt="Email" />
+                </a>
+            </div>
+            <div class="icon-circle">
+                <a href="https://github.com/AngelaMunante" target="_blank" class="icon-circle">
+                    <img src="img/contatos/github.png" alt="GitHub" />
+                </a>
+            </div>
+            <div class="icon-circle">
+                <a href="http://lattes.cnpq.br/8549362258744564" target="_blank" class="icon-circle">
+                    <img src="img/contatos/lattes.png" alt="Lattes" />
+                </a>
+            </div>
+            <div class="icon-circle">
+                <a href="https://www.linkedin.com/in/angela-patricia-mestas-muñante-847564243" target="_blank" class="icon-circle">
+                    <img src="img/contatos/linkedin.png" alt="LinkedIn" />
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVA SCRIPT-->
+    <script src="script.js"></script>
+
+</body>
+</html>

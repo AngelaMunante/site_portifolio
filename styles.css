@@ -1,0 +1,577 @@
+body {
+    margin: 0;
+    padding-top: 130px; 
+    scroll-padding-top: 200px;
+    font-family: 'Signika Negative'; /* Ensuring consistent font usage */
+    background-color: #0B0C17; /* Dark background color */
+    color: #FEEDDD; /* Light text color */
+    scroll-padding-top: 100px
+}
+
+header {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #0B0C17;
+    position: fixed; /* Fix the header at the top */
+    top: 0; /* Position at the top */
+    left: 0; /* Align to the left */
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center; /* Updated to center the nav */
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px; /* Adjust the gap between navigation items */
+    align-items: center; /* Centers the items vertically */
+}
+
+.navigation li {
+    padding: 5px 10px;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #FEEDDD;
+    font-size: 1.3rem; /* Adjust based on design */
+}
+
+.header-title img {
+    display: block; /* Ensures the image is treated as a block-level element */
+    max-height: 100px; /* Adjust based on the actual image size */
+    max-width: 100%; /* Ensures the image is responsive and does not overflow */
+}
+
+.frame-container {
+    position: relative;
+    text-align: center; /* This will center the frame image */
+    margin-top: 1px; /* Adjust as necessary for spacing */
+}
+
+.decorative-frame {
+    width: 50%; /* Adjust based on your design requirements */
+    height: auto; /* This keeps the aspect ratio of the frame image */
+    z-index: 1; /* Ensures the frame is behind the central image */
+    margin: 0 auto; /* Centers the frame in the container */
+}
+
+.about-me-card {
+    background-color: #FEEDDD; /* Cream color background */
+    border-radius: 15px; /* Rounded corners */
+    border: 1px solid #FEEDDD; /* Thin border, adjust the color as needed */
+    box-shadow: 
+        0 4px 8px #0B0C17, /* Original shadow for depth */
+        0 0 0 7px #0B0C17, /* Matching the card's background color for spacing */
+        0 0 0 8px #FEEDDD; /* Outer thin border, adjust the color as needed */
+    padding: 0px 20px 10px; /* Space inside the card */
+    max-width: 800px; /* Maximum width of the card */
+    margin: 40px auto; /* Center the card with margin */
+    font-family: 'Signika Negative', sans-serif; /* Font family from your CSS */
+    color: #0B0C17; /* Text color for the card */
+    position: relative; /* To properly place the pseudo-elements */
+    z-index: 1; /* Ensure the card is above the pseudo-elements */
+}
+
+.about-me-card h2 {
+    font-size: 4rem; /* Large text for the title */
+    margin-bottom: 2px; /* Space below the title */
+    text-align: center;
+    margin-top: 5px;
+    font-family: 'Lora', sans-serif; /* Font family from your CSS */
+}
+
+.about-me-card p {
+    font-size: 1rem; /* Adjust the font size as needed */
+    line-height: 1.6; /* Spacing between lines for readability */
+    text-align: center; /* Justify text for a clean look */
+}
+
+.partes-title {
+    text-align: center; /* Centers the title text */
+    font-family: 'Lora', sans-serif;
+    font-size: 2.5rem;
+    margin: 0 auto;
+    padding-bottom: 0; 
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-around; /* Distributes space around the cards */
+    padding: 0 20px;
+}
+
+.card {
+    background-color: #FEEDDD; /* Card background color */
+    width: 200px; /* Width of the card, increase as needed */
+    height: 200px;
+    margin: 10px; /* Space between cards */
+    text-align: center; /* Align text to center inside the card */
+    border-radius: 15px; /* Rounded corners */
+    border: 1px solid #FEEDDD; /* Thin border, adjust the color as needed */
+    box-shadow: 
+        0 4px 8px #0B0C17, /* Original shadow for depth */
+        0 0 0 7px #0B0C17, /* Matching the card's background color for spacing */
+        0 0 0 8px #FEEDDD; /* Outer thin border, adjust the color as needed */
+    padding: 0px 20px 10px; /* Space inside the card */
+    font-family: 'Signika Negative', sans-serif; /* Font family from your CSS */
+    perspective: 1000px; /* Depth effect for the flip */
+}
+
+
+.card-image { /* Make image fill the card width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for image */
+}
+.card:nth-child(1) .card-image {
+    width: 55%;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.card:nth-child(2) .card-image {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.card:nth-child(3) .card-image {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 60px;
+}
+
+.card:nth-child(4) .card-image {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 55px;
+}
+
+.card-title {
+    margin-top: 10px; /* Space above title */
+    margin-bottom: 0px;
+    font-size: 1.5rem; /* Size of title text */
+    color:#0B0C17; /* Title text color */
+    font-family: 'Lora', sans-serif;
+}
+
+.cards-container p {
+    font-size: 1rem; /* Adjust the font size as needed */
+    line-height: 1.6; /* Spacing between lines for readability */
+    text-align: center; /* Justify text for a clean look */
+    color:#0B0C17;
+}
+
+
+
+
+/* Add this at the bottom of your existing CSS */
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, 
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border-radius: 15px;
+    color: #0B0C17;
+    background-color: #FEEDDD;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    font-family: 'Signika Negative';
+}
+
+.circular-section {
+    text-align: center;
+    padding: 20px 0;
+    padding-top: 0;
+}
+
+.circular-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0px;
+    flex-wrap: wrap;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.circle {
+    background-color: #0B0C17; /* Dark background for the circle */
+    border-radius: 50%; /* Makes the div a circle */
+    width: 150px; /* Size of the circle */
+    height: 150px; /* Size of the circle */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    margin: 27px; /* Adjust margin as needed to control spacing */
+    border: 2px solid #FEEDDD; /* Border color as per the design */
+}
+
+.circle-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.circle:hover .circle-inner {
+    transform: rotateY(180deg);
+}
+
+.circle-front, 
+.circle-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.circle-front {
+    background-color: #0B0C17;
+}
+
+.circle-back {
+    background-color: #FEEDDD;
+    color: #0B0C17;
+    transform: rotateY(180deg);
+    font-size: 1.2rem; /* Adjust font size as needed */
+    font-family: 'Signika Negative', sans-serif; /* Your chosen font family */
+}
+
+.circle:nth-child(1) .circle-image {
+    max-width: 110%; /* Adjust image size as needed */
+    height: auto;
+}
+
+.circle:nth-child(2) .circle-image {
+    max-width: 120%; /* Adjust image size as needed */
+    height: auto;
+}
+
+.circle:nth-child(3) .circle-image {
+    max-width: 123%; /* Adjust image size as needed */
+    height: auto;
+}
+
+.circle-back span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+
+.bordered-title {
+    display: inline-block;
+    text-align: center; /* Center the title */
+    padding: 20px; /* Padding around the text */
+    margin-top: 0px; /* Space from the previous content */
+    border-radius: 15px;
+    font-size: 2rem; /* Font size of the title */
+    color: #FEEDDD; /* Text color */
+    border: 1px solid #FEEDDD;
+    position: relative; /* Needed for absolute positioning of pseudo-elements */
+}
+
+.bordered-title::after {
+    content: '';
+    position: absolute;
+    border-radius: 15px;
+    top: 5px; /* Adjust these values based on your padding and desired border width */
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 1px dotted #FEEDDD; /* Inner dotted border */
+    pointer-events: none; /* Avoid any mouse events on the pseudo element */
+}
+
+.card-container {
+    background-color: #FEEDDD; /* Background color for the card */
+    border-radius: 15px; /* Rounded corners */
+    padding: 10px; /* Padding around the content */
+    margin: 10px auto; /* Center the card horizontally and add some margin on top and bottom */
+    max-width: 600px; /* Maximum width of the card */
+    box-shadow: 
+        0 4px 8px #0B0C17, /* Original shadow for depth */
+        0 0 0 7px #0B0C17, /* Matching the card's background color for spacing */
+        0 0 0 8px #FEEDDD;
+    font-family: 'Signika Negative', sans-serif;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.card-top-button {
+    display: flex; /* Flexbox to align button and content */
+    align-items: center; /* Vertical alignment */
+}
+
+.card-button {
+    margin-right: 10px; /* Margin to the right of the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    border: none; /* No border */
+    background-color: #bab4b4; /* Background color of the button */
+    padding: 10px; /* Padding inside the button */
+    width: 35px;
+    height: 35px;
+    border-radius: 50%; /* Make it round */
+    font-size: 1.5rem; /* Size of the '+' symbol */
+    transition: #0B0C17 0.3s;
+    text-align: center; /* Align text center */
+    line-height: 1; /* Ensures the '+' symbol is aligned with its container's height */
+    padding: 0;
+}
+
+.card-button:hover {
+    background-color: #787B88; /* Darker background on hover */
+}
+
+.card-topic {
+    flex-grow: 1; /* Allows the topic area to fill the available space */
+}
+
+.card-nome-projeto {
+    margin: 0; /* No margin to start at the very top of the card */
+    color: #0B0C17; /* Dark color for the text */
+    font-size: 24px;
+}
+
+
+.card-hidden {
+    display: none; /* Hidden by default */
+    padding-top: 20px; /* Space between the top content and the hidden content */
+}
+
+.card-link {
+    color: #0077b5; /* Style the link with a color */
+    text-decoration: none; /* No underline */
+    font-size: 20px;
+}
+
+.card-descricao {
+    color: #666; /* Color for the description text */
+    font-size: 18px;
+}
+
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 30px; /* Space between items */
+    justify-content: center; /* Center grid items horizontally */
+    align-items: center; /* Center grid items vertically */
+    padding: 40px; /* Space around the grid */
+    max-width: 600px; /* Maximum width of the grid */
+    margin: auto; /* Center the grid in the container */
+}
+
+.skill-item {
+    background-color: #0B0C17; /* Background color for the skill item */
+    border: 1px solid #FEEDDD;
+    border-radius: 15px; /* Rounded corners */
+    height: 150px; /* Height of the skill item */
+    display: flex; /* Use flexbox to center the image */
+    align-items: center; /* Center the image vertically */
+    justify-content: center; /* Center the image horizontally */
+    cursor: pointer; /* Indicates an interactive element */
+    transition: all 0.3s ease;
+    position: relative; /* Add this line */
+    overflow: hidden;
+}
+
+.skill-item img {
+    max-width: 60%; /* Maximum width of the image relative to its container */
+    height: auto; /* Maintain aspect ratio */
+    transition: all 0.3s ease;
+}
+
+.skill-description {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    bottom: 10px; /* Adjust this value as necessary */
+    left: 50%;
+    transform: translate(-50%, 20px); /* Center horizontally and move slightly down */
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s, transform 0.3s ease;
+    color: #FEEDDD; /* Set the text color */
+    text-align: center;
+    width: 100%;
+    font-size: 24px;
+    font-family: 'Signika Negative';
+}
+
+.skill-item:hover img {
+    margin-top: -30px; /* Move up by 20px */
+    transform: scale(0.8);
+}
+
+.skill-item:hover .skill-description {
+    opacity: 1;
+    visibility: visible; /* Make it visible on hover */
+    transform: translate(-50%, -5px); /* Move up */
+    transition: opacity 0.3s ease, visibility 0s, transform 0.3s ease;
+    transition-delay: 0s;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px; /* Adjust the space between circles as needed */
+    margin-top: 0px;
+    margin-bottom: 40px;
+    background-color: #0B0C17; /* Match the background color of the contacts section */
+}
+.icon-circle {
+    background-color: #FEEDDD; /* Light background for contrast */
+    border-radius: 50%; /* Makes it a circle */
+    width: 90px; /* Set the size of the circle */
+    height: 90px; /* Make it equal to width to keep it a circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 
+        0 4px 8px #0B0C17, /* Original shadow for depth */
+        0 0 0 7px #0B0C17, /* Matching the card's background color for spacing */
+        0 0 0 8px #FEEDDD; 
+    transition: transform 0.3s ease-in-out; /* Smooth transition for scaling effect */
+}
+
+.icon-circle:hover {
+    transform: scale(1.1); /* Increase the size of the circle by 10% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Optionally make the shadow larger as well */
+}
+
+.icon-circle img {
+    width: 60px; /* Adjust the image size within the circle */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for scaling effect */
+}
+
+.icon-circle:hover img {
+    transform: scale(1.1); /* Optionally increase the size of the image by 10% as well */
+}
+
+.skills-grid.outros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px; /* Adjust the space between circles as needed */
+    margin-top: 0px;
+}
+
+.skill-item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-item2 {
+    width: 150px; /* Smaller size for 'Outros' skill items */
+    height: 150px; /* Keep aspect ratio */
+    border-radius: 50%; /* Circular shape */
+    overflow: hidden; /* Keep everything contained */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for the hover */
+    cursor: pointer; /* Indicates it's clickable or interactive */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.skill-item2 img {
+    width: 100%; /* Fill the circle */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.skill-item2:hover {
+    transform: translateY(-10px); /* Move up on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+.skill-desc {
+    font-size: 24px;
+    font-family: 'Signika Negative';
+    color: #FEEDDD; /* Light text color */
+    text-align: center;
+    margin-top: 10px; /* Space above the description */
+    margin-bottom: 0px;
+}
+.skill-container {
+    display: flex;
+    justify-content: center;
+    /* Other styling as necessary */
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .navigation ul {
+        display: none; /* Example to hide navigation on small screens */
+    }
+    .cards-container {
+        flex-direction: column; /* Stack the cards vertically on small screens */
+    }
+    .card {
+        width: auto; /* Allow the card to fill the available width */
+    }
+    .circular-container {
+        flex-direction: column;
+    }
+    .circle {
+        width: 150px; /* Smaller size on mobile */
+        height: 150px; /* Smaller size on mobile */
+        margin-bottom: 20px; /* Space between vertically stacked circles */
+    }
+    .card-inner {
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+    .card:hover .card-inner {
+        transform: none; /* Optional: You may disable the flip effect on smaller screens */
+    }
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+        gap: 10px;
+    }
+
+}
